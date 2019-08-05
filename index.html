@@ -22,10 +22,7 @@ void setup() {
 
 void draw() {
   
-  background(255);
-  vr = vr+1;
-  vg = vg+2;
-  vb = vb+5;
+  background(120);
   
   pushMatrix();
   translate(width/2, height/2);
@@ -47,11 +44,19 @@ void draw() {
   angle+=(2*PI)/180;
   popMatrix();
   
+  stroke(10);
+  strokeWeight(2);
+  noFill();
   
-  noStroke();
   ellipse(150, 300, 25, 25);
   ellipse(200, 300, 25, 25);
   ellipse(250, 300, 25, 25); 
+  ellipse (0,0,25,25);
+  
+  vr = vr+1;
+  vg = vg+2;
+  vb = vb+5;
+  
 }
             
         </script>
