@@ -23,22 +23,17 @@ void setup() {
 void draw() {
   
   background(255);
+  vr = vr+1;
+  vg = vg+2;
+  vb = vb+5;
+  
   pushMatrix();
   translate(width/2, height/2);
-  
-  
   
   rotate(angle);
   rotate(cos(angle));
   
-  noStroke();
-  
- 
-  
-    vr = vr+1;
-    vg = vr+2;
-    vb = vr+5;
-    
+  noStroke();   
   fill(vr,vg,vb);
   
   ellipse(0, 150, 25, 25);
@@ -46,30 +41,17 @@ void draw() {
   ellipse(0, 50, 25, 25);
   ellipse(0, 0, 25, 25);
   
-
-  
   stroke(10);
   strokeWeight(2);
-  
   line(0, 0, 0, 150);
-  
   angle+=(2*PI)/180;
-  
   popMatrix();
-  stroke(100);
-  strokeWeight(2);
   
   
-  
+  noStroke();
   ellipse(150, 300, 25, 25);
   ellipse(200, 300, 25, 25);
-  ellipse(250, 300, 25, 25);
- 
-    vr = vr-1;
-    vg = vr-2;
-    vb = vr-5;
- 
-  
+  ellipse(250, 300, 25, 25); 
 }
             
         </script>
