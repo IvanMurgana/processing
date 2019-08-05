@@ -10,20 +10,64 @@
         <h1>Processing project by Antonio</h1>
         <script type="text/processing">
 
-            // Write your project here
-            
-            // Example
-            void setup() {
-              size(200, 200);
-              background(255);
-            }
-            void draw(){
-                pushMatrix();
-                translate(100, 100);
-                rotate(radians(frameCount * 2  % 360));
-                rect(0, 0, 80, 5);
-                popMatrix();
-            }
+           float angle;
+int vr,vg,vb;
+
+void setup() {
+  size(600, 600);
+    vr = 0; 
+    vg = 0;
+    vb = 0;
+}
+
+void draw() {
+  
+  background(255);
+  pushMatrix();
+  translate(width/2, height/2);
+  
+  
+  
+  rotate(angle);
+  rotate(cos(angle));
+  
+  noStroke();
+  
+ 
+  
+    vr = vr+1;
+    vg = vr+2;
+    vb = vr+5;
+    
+  fill(vr,vg,vb);
+  
+  ellipse(0, 150, 25, 25);
+  ellipse(0, 100, 25, 25);
+  ellipse(0, 50, 25, 25);
+  ellipse(0, 0, 25, 25);
+  
+
+  
+  stroke(10);
+  strokeWeight(2);
+  
+  line(0, 0, 0, 150);
+  
+  angle+=(2*PI)/180;
+  
+  popMatrix();
+  stroke(100);
+  strokeWeight(2);
+  
+  line(150, height, 450, height);
+  
+  ellipse(150, 300, 25, 25);
+  ellipse(200, 300, 25, 25);
+  ellipse(250, 300, 25, 25);
+ 
+ 
+  
+}
             
         </script>
         <canvas></canvas>
